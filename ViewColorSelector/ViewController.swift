@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var colorView: UIView!
     
@@ -22,10 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupRedValue()
-        setupGreenValue()
-        setupBlueValue()
-        
+        setupSlidersValue()
         setupColorView()
     }
 
@@ -42,23 +39,17 @@ class ViewController: UIViewController {
         blueValue.text = blueSlider.value.formatted()
     }
     
-    private func setupRedValue(){
+    private func setupSlidersValue(){
         redValue.text = redSlider.value.formatted()
-    }
-    private func setupGreenValue(){
         greenValue.text = greenSlider.value.formatted()
-    }
-    private func setupBlueValue(){
         blueValue.text = blueSlider.value.formatted()
     }
-    
-    
-    
     private func setupColorView() {
             let red = CGFloat(redSlider.value)
             let green = CGFloat(greenSlider.value)
             let blue = CGFloat(blueSlider.value)
             
+            colorView.layer.cornerRadius = 16
             colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         }
 }
