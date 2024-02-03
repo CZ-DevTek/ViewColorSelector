@@ -52,7 +52,7 @@
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="iLh-4Z-eSD"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nBm-vy-2vm"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -86,7 +86,7 @@
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="PHv-3J-C9W"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fx-oE-0sA"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -121,7 +121,7 @@
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Qql-8P-hgC"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qnZ-ZR-0VU"/>
                                                 </connections>
                                             </slider>
                                         </subviews>

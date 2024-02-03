@@ -26,19 +26,20 @@ final class ViewController: UIViewController {
         setupColorView()
     }
 
-    @IBAction func redSliderAction() {
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        switch sender {
+            case redSlider:
+                redValue.text = redSlider.value.formatted()
+            case greenSlider:
+                greenValue.text = greenSlider.value.formatted()
+            case blueSlider:
+                blueValue.text = blueSlider.value.formatted()
+            default:
+                break
+        }
         setupColorView()
-        redValue.text = redSlider.value.formatted()
     }
-    @IBAction func greenSliderAction() {
-        setupColorView()
-        greenValue.text = greenSlider.value.formatted()
-    }
-    @IBAction func blueSliderAction() {
-        setupColorView()
-        blueValue.text = blueSlider.value.formatted()
-    }
-    
+ 
     private func setupSlidersValue(){
         redValue.text = redSlider.value.formatted()
         greenValue.text = greenSlider.value.formatted()
