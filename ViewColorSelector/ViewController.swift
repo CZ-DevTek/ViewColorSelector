@@ -47,9 +47,13 @@ final class ViewController: UIViewController {
         let red = CGFloat(redSlider.value)
         let green = CGFloat(greenSlider.value)
         let blue = CGFloat(blueSlider.value)
-        
         colorView.layer.cornerRadius = 16
-        colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        colorView.backgroundColor = UIColor(
+            red: red,
+            green: green,
+            blue: blue,
+            alpha: 1.0
+        )
     }
 }
 
