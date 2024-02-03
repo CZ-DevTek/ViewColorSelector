@@ -34,7 +34,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="YRQ-k0-sa1"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -43,7 +43,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="4pJ-hG-1Uq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -52,7 +52,7 @@
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="redColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q5W-aK-jxk"/>
+                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="iLh-4Z-eSD"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -68,7 +68,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="Cbt-tU-jdz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -77,7 +77,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="1eQ-DC-EYK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -86,7 +86,7 @@
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="greenColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="pfX-32-1cx"/>
+                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="PHv-3J-C9W"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -103,7 +103,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="BDi-zp-3J9"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -112,7 +112,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="Cxh-9V-FT8"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -121,7 +121,7 @@
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
-                                                    <action selector="blueColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="GwO-ZZ-wOz"/>
+                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Qql-8P-hgC"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -150,10 +150,13 @@
                     </view>
                     <connections>
                         <outlet property="ColorView" destination="Gzp-s0-9oJ" id="Iv9-os-DCy"/>
-                        <outlet property="blueSlider" destination="eiZ-CY-suS" id="2ZF-Rn-g5V"/>
+                        <outlet property="blueSlider" destination="eiZ-CY-suS" id="RKi-5J-qI4"/>
+                        <outlet property="blueValue" destination="9N5-y2-ZBw" id="8Hv-h0-npC"/>
                         <outlet property="colorView" destination="Gzp-s0-9oJ" id="7uj-te-ub9"/>
-                        <outlet property="greenSlider" destination="eBe-c1-dRw" id="pzs-ya-hgg"/>
-                        <outlet property="redSlider" destination="PzU-hq-koO" id="TAH-Zm-TxL"/>
+                        <outlet property="greenSlider" destination="eBe-c1-dRw" id="K8d-Wo-ZSX"/>
+                        <outlet property="greenValue" destination="bIn-tk-izo" id="y7q-VX-LF6"/>
+                        <outlet property="redSlider" destination="PzU-hq-koO" id="Zco-ru-dh6"/>
+                        <outlet property="redValue" destination="VAN-AN-eoI" id="5wM-nv-tRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
