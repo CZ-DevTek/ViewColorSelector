@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzp-s0-9oJ">
-                                <rect key="frame" x="16" y="46" width="288" height="153.5"/>
+                                <rect key="frame" x="16" y="55" width="288" height="114"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gzp-s0-9oJ" secondAttribute="height" multiplier="15:8" id="rYF-bJ-p8o"/>
+                                    <constraint firstAttribute="width" secondItem="Gzp-s0-9oJ" secondAttribute="height" multiplier="48:19" id="Kx6-r9-fbd"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-YV-UBg">
-                                <rect key="frame" x="16" y="245" width="288" height="121.5"/>
+                                <rect key="frame" x="16" y="205" width="288" height="121.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-7A-6mh">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -51,6 +51,9 @@
                                                 <rect key="frame" x="99" y="0.0" width="191" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="redColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q5W-aK-jxk"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -82,6 +85,9 @@
                                                 <rect key="frame" x="99" y="0.0" width="191" height="24.5"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="greenColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="pfX-32-1cx"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -114,6 +120,9 @@
                                                 <rect key="frame" x="99" y="0.0" width="191" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="blueColorSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="GwO-ZZ-wOz"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -130,16 +139,22 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gzp-s0-9oJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARs-R3-xNo"/>
-                            <constraint firstItem="Gzp-s0-9oJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="IWA-nr-V3q"/>
+                            <constraint firstItem="Gzp-s0-9oJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="6Vw-tY-dbJ"/>
                             <constraint firstItem="Gzp-s0-9oJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V3U-mT-I5q"/>
                             <constraint firstItem="uhV-YV-UBg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cam-5r-hsv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uhV-YV-UBg" secondAttribute="trailing" constant="16" id="e79-TU-KYO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gzp-s0-9oJ" secondAttribute="trailing" constant="16" id="gAS-El-s4K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uhV-YV-UBg" secondAttribute="bottom" constant="201.5" id="mG6-nE-Mxz"/>
+                            <constraint firstItem="uhV-YV-UBg" firstAttribute="top" secondItem="Gzp-s0-9oJ" secondAttribute="bottom" constant="36" id="kLs-F7-dBG"/>
                             <constraint firstItem="uhV-YV-UBg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p9K-K9-36Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ColorView" destination="Gzp-s0-9oJ" id="Iv9-os-DCy"/>
+                        <outlet property="blueSlider" destination="eiZ-CY-suS" id="2ZF-Rn-g5V"/>
+                        <outlet property="colorView" destination="Gzp-s0-9oJ" id="7uj-te-ub9"/>
+                        <outlet property="greenSlider" destination="eBe-c1-dRw" id="pzs-ya-hgg"/>
+                        <outlet property="redSlider" destination="PzU-hq-koO" id="TAH-Zm-TxL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
