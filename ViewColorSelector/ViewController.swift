@@ -10,9 +10,11 @@ import UIKit
 final class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    
     @IBOutlet weak var redValue: UILabel!
     @IBOutlet weak var greenValue: UILabel!
     @IBOutlet weak var blueValue: UILabel!
@@ -29,10 +31,8 @@ final class ViewController: UIViewController {
                 redValue.text = redSlider.value.formatted()
             case greenSlider:
                 greenValue.text = greenSlider.value.formatted()
-            case blueSlider:
-                blueValue.text = blueSlider.value.formatted()
             default:
-                break
+                blueValue.text = blueSlider.value.formatted()
         }
         setupColorView()
     }
@@ -59,6 +59,6 @@ final class ViewController: UIViewController {
 
 extension Float {
     func formatted() -> String {
-        return String(format: "%.2f", self)
+        String(format: "%.2f", self)
     }
 }
