@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+protocol ColorSelectionDelegate: AnyObject {
+    func didSelectColor(color: UIColor)
+}
+
+final class MainViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     
@@ -21,8 +25,14 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorView.layer.cornerRadius = 16
         setupSlidersValue()
         setupColorView()
+    }
+    
+    override func prepare(for segue : UIStoryboardSegue, sender: Any?) {
+        let secondVC = segue.destination as? SecondViewController
+        secondVC?.delegate = self
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -47,7 +57,7 @@ final class ViewController: UIViewController {
         let red = CGFloat(redSlider.value)
         let green = CGFloat(greenSlider.value)
         let blue = CGFloat(blueSlider.value)
-        colorView.layer.cornerRadius = 16
+        
         colorView.backgroundColor = UIColor(
             red: red,
             green: green,
@@ -56,9 +66,19 @@ final class ViewController: UIViewController {
         )
     }
 }
-
 extension Float {
     func formatted() -> String {
         String(format: "%.2f", self)
     }
 }
+// MARK - ColorSelectionDelegate
+extension MainViewController: ColorSelectionDelegate {
+    func didSelectColor(color: UIColor) {
+        let red = CGFloat(redSlider.value)
+        let green = CGFloat(greenSlider.value)
+        let blue = CGFloat(blueSlider.value)
+        
+        let selectedColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+    }
+}
+
