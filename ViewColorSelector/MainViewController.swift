@@ -33,6 +33,7 @@ final class MainViewController: UIViewController {
     override func prepare(for segue : UIStoryboardSegue, sender: Any?) {
         let secondVC = segue.destination as? SecondViewController
         secondVC?.delegate = self
+        secondVC?.backgroundColor = colorView.backgroundColor
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -74,11 +75,9 @@ extension Float {
 // MARK - ColorSelectionDelegate
 extension MainViewController: ColorSelectionDelegate {
     func didSelectColor(color: UIColor) {
-        let red = CGFloat(redSlider.value)
-        let green = CGFloat(greenSlider.value)
-        let blue = CGFloat(blueSlider.value)
-        
-        let selectedColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        if let secondVC = presentedViewController as? SecondViewController {
+                    secondVC.view.backgroundColor = color
+        }
     }
 }
 
