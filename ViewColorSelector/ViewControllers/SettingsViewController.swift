@@ -10,7 +10,7 @@ import UIKit
 final class SettingsViewController: UIViewController {
     
     
-    //MARK - IB Outlets
+    //MARK: - IB Outlets
     @IBOutlet weak var colorView: UIView!
     
     @IBOutlet weak var redSlider: UISlider!
@@ -72,7 +72,7 @@ final class SettingsViewController: UIViewController {
     }
 }
     
-    // Mark: - Private Methods
+    // MARK: - Private Methods
 extension SettingsViewController {
     private func setColor() {
         colorView.backgroundColor = UIColor(
@@ -128,7 +128,7 @@ extension SettingsViewController {
         present(alert, animated: true)
     }
 }
-    // MARK - UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
     extension SettingsViewController: UITextFieldDelegate {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()

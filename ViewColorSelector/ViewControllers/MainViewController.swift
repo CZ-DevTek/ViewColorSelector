@@ -17,6 +17,11 @@ final class MainViewController: UIViewController {
         settingsVC?.delegate = self
         settingsVC?.viewColor = view.backgroundColor
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
     
 //Mark: - SettingsViewControllerDelegate
