@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ViewColorSelector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="ViewColorSelector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-YV-UBg">
                                 <rect key="frame" x="16" y="271" width="343" height="144.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-7A-6mh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-7A-6mh">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9db-6R-wiu">
@@ -40,7 +40,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAN-AN-eoI">
-                                                <rect key="frame" x="57" y="0.0" width="38" height="30"/>
+                                                <rect key="frame" x="54" y="0.0" width="38" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="4pJ-hG-1Uq"/>
                                                 </constraints>
@@ -49,13 +49,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PzU-hq-koO">
-                                                <rect key="frame" x="99" y="0.0" width="246" height="31"/>
+                                                <rect key="frame" x="93" y="0.0" width="249" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nBm-vy-2vm"/>
                                                 </connections>
                                             </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtC-1G-Faj">
+                                                <rect key="frame" x="343" y="0.0" width="0.0" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Tic-lK-CsE"/>
@@ -83,13 +88,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-c1-dRw">
-                                                <rect key="frame" x="99" y="0.0" width="246" height="47.5"/>
+                                                <rect key="frame" x="99" y="0.0" width="240" height="47.5"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fx-oE-0sA"/>
                                                 </connections>
                                             </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAA-1p-L8l">
+                                                <rect key="frame" x="343" y="0.0" width="0.0" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="eBe-c1-dRw" firstAttribute="top" secondItem="Khi-Sn-iUf" secondAttribute="top" id="8No-mc-H2M"/>
@@ -118,13 +128,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eiZ-CY-suS">
-                                                <rect key="frame" x="99" y="0.0" width="246" height="31"/>
+                                                <rect key="frame" x="99" y="0.0" width="240" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <color key="thumbTintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qnZ-ZR-0VU"/>
                                                 </connections>
                                             </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAK-on-cEC">
+                                                <rect key="frame" x="343" y="0.0" width="0.0" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -136,7 +151,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-cp-2Om">
-                                <rect key="frame" x="138" y="529.5" width="99" height="48.5"/>
+                                <rect key="frame" x="138" y="480.5" width="99" height="48.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -150,7 +165,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="qH6-2a-J3m" kind="show" identifier="SecondVC" id="omv-KB-d0L"/>
+                                    <action selector="doneButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="A4o-Ji-RzL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -175,21 +190,21 @@
                     <connections>
                         <outlet property="blueSlider" destination="eiZ-CY-suS" id="RKi-5J-qI4"/>
                         <outlet property="blueValue" destination="9N5-y2-ZBw" id="8Hv-h0-npC"/>
-                        <outlet property="colorView" destination="Gzp-s0-9oJ" id="7uj-te-ub9"/>
                         <outlet property="greenSlider" destination="eBe-c1-dRw" id="K8d-Wo-ZSX"/>
                         <outlet property="greenValue" destination="bIn-tk-izo" id="y7q-VX-LF6"/>
                         <outlet property="redSlider" destination="PzU-hq-koO" id="Zco-ru-dh6"/>
                         <outlet property="redValue" destination="VAN-AN-eoI" id="5wM-nv-tRY"/>
+                        <outlet property="viewColor" destination="Gzp-s0-9oJ" id="mGZ-sy-NKV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="3.1484257871064472"/>
+            <point key="canvasLocation" x="1544.8" y="0.44977511244377816"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="69T-sD-LhE">
             <objects>
-                <viewController id="qH6-2a-J3m" customClass="SecondViewController" customModule="ViewColorSelector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qH6-2a-J3m" customClass="MainViewController" customModule="ViewColorSelector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ewa-ym-G5U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,10 +214,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ziu-xC-wY9">
                         <barButtonItem key="rightBarButtonItem" title="Item" width="50" id="6yi-qW-S0N">
-                            <imageReference key="image" image="arrow.backward.square.fill" catalog="system" symbolScale="large"/>
+                            <imageReference key="image" image="arrowshape.forward.circle" catalog="system" symbolScale="large"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="selectColor:" destination="qH6-2a-J3m" id="t3m-3K-eOT"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="iaW-FK-69j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -210,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQO-o9-3fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="2"/>
+            <point key="canvasLocation" x="810" y="2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fR0-sn-dsM">
@@ -223,7 +239,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y8V-mj-ZIy"/>
+                        <segue destination="qH6-2a-J3m" kind="relationship" relationship="rootViewController" id="d9O-jB-1Yj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STy-0k-8eE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -232,7 +248,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward.square.fill" catalog="system" width="128" height="114"/>
+        <image name="arrowshape.forward.circle" catalog="system" width="128" height="123"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
